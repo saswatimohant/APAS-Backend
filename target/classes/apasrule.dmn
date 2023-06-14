@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="apasruledef" name="APAS Rule" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.2.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <decision id="apasrule" name="InvoicePOMatch">
+    <informationRequirement id="InformationRequirement_0sr88xo">
+      <requiredInput href="#InputData_0wts32b" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0itvhyv">
+      <requiredInput href="#InputData_00xbvkn" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_0z7v04s" hitPolicy="FIRST">
+      <input id="Input_1">
+        <inputExpression id="InputExpression_1" typeRef="double">
+          <text>invamt</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" name="matchres" typeRef="boolean" />
+      <rule id="DecisionRule_1kw7i8k">
+        <inputEntry id="UnaryTests_0u1xt4z">
+          <text>&lt;= ${poamt}</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05s0jks">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_07gbsot">
+        <inputEntry id="UnaryTests_0tteqf1">
+          <text>&gt; ${poamt}</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_09z3zhj">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_0wts32b" name="invamt" />
+  <inputData id="InputData_00xbvkn" name="poamt" />
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="apasrule">
+        <dc:Bounds height="80" width="180" x="210" y="100" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0w7xjt8" dmnElementRef="InputData_0wts32b">
+        <dc:Bounds height="45" width="125" x="158" y="247" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_13ccr3h" dmnElementRef="InformationRequirement_0sr88xo">
+        <di:waypoint x="221" y="247" />
+        <di:waypoint x="270" y="200" />
+        <di:waypoint x="270" y="180" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_1anl8q9" dmnElementRef="InputData_00xbvkn">
+        <dc:Bounds height="45" width="125" x="328" y="248" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1cggqt0" dmnElementRef="InformationRequirement_0itvhyv">
+        <di:waypoint x="391" y="248" />
+        <di:waypoint x="330" y="200" />
+        <di:waypoint x="330" y="180" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

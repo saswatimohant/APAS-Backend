@@ -1,0 +1,47 @@
+{
+  "groups": [
+    {
+      "name": "misboi.connector.email",
+      "type": "com.misboi.apas.config.EmailConfig",
+      "sourceType": "com.misboi.apas.config.EmailConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "misboi.connector.email.h-o-s-t",
+      "type": "java.lang.String",
+      "sourceType": "com.misboi.apas.config.EmailConfig"
+    },
+    {
+      "name": "misboi.connector.email.k-e-y-w-o-r-d",
+      "type": "java.lang.String",
+      "sourceType": "com.misboi.apas.config.EmailConfig"
+    },
+    {
+      "name": "misboi.connector.email.p-a-s-s-w-o-r-d",
+      "type": "java.lang.String",
+      "sourceType": "com.misboi.apas.config.EmailConfig"
+    },
+    {
+      "name": "misboi.connector.email.p-o-r-t",
+      "type": "java.lang.Integer",
+      "sourceType": "com.misboi.apas.config.EmailConfig"
+    },
+    {
+      "name": "misboi.connector.email.p-r-o-t-o-c-o-l",
+      "type": "java.lang.String",
+      "sourceType": "com.misboi.apas.config.EmailConfig"
+    },
+    {
+      "name": "misboi.connector.email.s-a-v-e-d-i-r-e-c-t-o-r-y",
+      "type": "java.lang.String",
+      "sourceType": "com.misboi.apas.config.EmailConfig"
+    },
+    {
+      "name": "misboi.connector.email.u-s-e-r-n-a-m-e",
+      "type": "java.lang.String",
+      "sourceType": "com.misboi.apas.config.EmailConfig"
+    }
+  ],
+  "hints": []
+}

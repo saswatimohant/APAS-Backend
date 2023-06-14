@@ -1,0 +1,43 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+name: dev-server
+environment: development
+enabled: true
+servers:
+  - localhost
+
+#camunda.bpm:
+#  admin-user:
+#    id: admin
+#    password: admin
+#    firstName: Admin
+#  filter:
+#    create: All tasks
+#
+#    # H2
+#    spring.h2.console:
+#      enabled: true
+#      path: /h2
+#
+#    # Datasource
+#    spring.datasource:
+#      url: jdbc:h2:file:D:/camunda-db/camunda-h2-database
+#      username: sa
+#      password: sa
+#      driver-class-name: org.h2.Driver
+
+#No details here will be changes except the saveDirectory
+misboi:
+  connector:
+    email:
+      protocol: imap
+      host: imap.gmail.com
+      port: 993
+      username: misboi.developer@gmail.com  
+      password: jgjthfqgedvwebgl
+      saveDirectory: D:\Projects\apas server\sftp\files
+      #This save directory needs to be created in your local system by yourself and then specify the path here accordingly mine was D drive in the Projects folder
+      keyword: Invoice
+           
